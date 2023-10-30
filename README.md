@@ -31,7 +31,7 @@ In your clone of this repository, click the repository settings and select "Webh
     * **De-select** the **Pushes** item.
     * **Select** the **Workflow jobs** item.
 
-Click "Add webhook"
+Click "Add webhook".
 
 Now, when a new change is detected in the repository, GitHub will dispatch the job to your Koyeb Scheduler vis webhooks.  The scheduler will provision Koyeb GitHub runners as required by the Actions labels.  The job will be processed and the results will be reported back to GitHub.
 
