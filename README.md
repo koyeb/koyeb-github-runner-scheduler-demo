@@ -8,17 +8,15 @@ You can read the [associated tutorial](https://www.koyeb.com/tutorials/) for mor
 
 To use this repository, clone it into your own account.  [Generate a GitHub personal access token](https://github.com/settings/personal-access-tokens/new) with access to your cloned repository and "Administration" permissions set to "Read and write".
 
-In the [Koyeb control panel](https://app.koyeb.com/), create a new [Koyeb personal access token](https://app.koyeb.com/user/settings/api) for the integration.
+Next, click the "Deploy to Koyeb" button to configure the Scheduler deployment:
 
-Next, click "Create App" and select "Docker" as the deployment method.  Deploy the [`github.io/koyeb/github-runner-scheduler` image](https://hub.docker.com/r/koyeb/github-runner-scheduler).
+[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?name=github-runner-scheduler&type=docker&image=docker.io/koyeb/github-runner-scheduler&env[GITHUB_TOKEN]=CHANGE_ME&env[KOYEB_TOKEN]=CHANGE_ME&env[API_SECRET]=CHANGE_ME&env[MODE]=repository&env[DISABLE_DOCKER_DAEMON]=true&ports=8000;http;/)
 
-Expand the "Advanced" section and set the following environment variables:
+Set the values for the following environment variables:
 
 * `GITHUB_TOKEN`: The personal access token you generated on GitHub.
 * `Koyeb_TOKEN`: The personal access token you generated on Koyeb.
 * `API_SECRET`: A random secret used to authenticate requests with GitHub webhooks.  You can generate a good secret with `openssl rand -base64 30`.  You'll need this same value later to configure the webhook on GitHub.
-* `MODE`: Set this to `repository` since we're configuring this for a single repository.
-* `DISABLE_DOCKER_DAEMON`: Since we don't need a Docker daemon on our runners, set this to `true`.
 
 Click "Deploy" when you are finished.  Copy the "Public URL" for the scheduler when it starts to deploy.
 
