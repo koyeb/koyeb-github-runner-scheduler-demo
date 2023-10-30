@@ -1,0 +1,17 @@
+name: Run unittests
+
+on:
+  push:
+    branches:
+      - '*'
+
+jobs:
+  run-tests-in-frankfurt:
+    runs-on: koyeb-fra-small
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Run tests
+        run: |
+          echo "Hello from a Small Koyeb Instance in Frankfurt!"
+          python -m unittest
