@@ -2,7 +2,7 @@
 
 This repository houses a simple application used to demonstrate how to deploy the [Koyeb GitHub Actions runner scheduler](https://github.com/koyeb/koyeb-github-runner-scheduler) on Koyeb.
 
-You can read the [associated tutorial](https://www.koyeb.com/tutorials/) for more information about how to use this application.
+You can read the [associated tutorial](https://www.koyeb.com/tutorials/dynamically-start-github-action-runners-on-koyeb) for more information about how to use this application.
 
 ## Using this repository
 
